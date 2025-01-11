@@ -1,6 +1,6 @@
 from backend.modules.search import SEARCH
 from backend.modules.llms import AIClient, pure_llama3
-from filter import filter_python
+from backend.modules.filter import filter_python
 from backend.modules.Powerpointer.main import generate_powerpoint
 from backend.AI.dealers import dealing
 import cv2
