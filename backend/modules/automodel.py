@@ -45,7 +45,7 @@ def get_extension_info():
             'parameters': extension['parameters']
         }
         extensions_info.append(extension_info)
-    return extensions_info
+    return json.dumps(extensions_info)  # P4c5
 
 extension_prompt = """
 """
@@ -159,7 +159,7 @@ Replace param1, param2, etc., with the actual parameters required by the extensi
 Now, feel free to utilize any extension whenever needed by providing corresponding Python code only.
 
 it seems user is using
-"""+get_os_info()+get_extension_info()
+""" + get_os_info() + get_extension_info()  # P5878
 
 prompt_distiguisher_img = """
 Please determine the user's intent based on their request:
