@@ -1,0 +1,23 @@
+[llm]
+provider = "openai"
+model = "gpt-4"
+api_key = "YOUR_OPENAI_API_KEY_HERE"
+
+[voice]
+provider = "elevenlabs"
+api_key = "your-api-key-here"
+voice_id = "default"
+
+[system]
+name = "JARVIS"
+wake_word = "jarvis"
+language = "en"
+temperature = 0.7
+max_tokens = 1000
+
+[logging]
+level = "INFO"
+file = "jarvis.log"
+
+[modules]
+enabled = ["weather", "news", "calendar", "reminder", "email", "web_search"]

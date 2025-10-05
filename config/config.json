@@ -1,0 +1,4 @@
+{
+    "OCR_LINK":"https://api.ocr.space/parse/image",
+    "GROQ_API":"YOUR_GROQ_API_KEY_HERE"
+}
