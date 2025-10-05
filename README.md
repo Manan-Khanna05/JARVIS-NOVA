@@ -41,7 +41,7 @@ JARVIS-NOVA is an advanced AI-powered assistant designed to combine multiple mod
 
 ## Features
 
-JARVIS-MARK5 offers a wide range of features:
+JARVIS-NOVA offers a wide range of features:
 
 - **AI-powered Search Engine**: The Perplexica module, integrated with GPT-4 and Groq, for intelligent and context-aware information retrieval.
 - **Automated PowerPoint Generator**: Generates presentations based on natural language input.
@@ -105,7 +105,7 @@ To install JARVIS-NOVA, follow these steps:
 
 ### Main Configuration
 
-The core configuration file for JARVIS-MARK5 is `config.json`, located in the `config` directory. This file contains basic settings and can be customized based on your requirements.
+The core configuration file for JARVIS-NOVA is `config.json`, located in the `config` directory. This file contains basic settings and can be customized based on your requirements.
 
 Here is an example `config.json` structure:
 ```json
@@ -119,7 +119,7 @@ Update the `OCR_LINK` with the appropriate OCR service and provide your Groq API
 
 ### API Keys
 
-Many of JARVIS-MARK5’s functionalities require API keys, such as for OpenAI and Groq. Ensure that you have signed up for these services and obtained API keys. You will then need to include them in the respective configuration files, as described in the section for each module.
+Many of JARVIS-NOVA’s functionalities require API keys, such as for OpenAI and Groq. Ensure that you have signed up for these services and obtained API keys. You will then need to include them in the respective configuration files, as described in the section for each module.
 
 ### Perplexica Configuration
 
@@ -184,7 +184,7 @@ python jarvis.py
 
 ### Module Commands
 
-Each module in JARVIS-MARK5 has its own set of commands. For example, to use the Perplexica search engine, you can simply input a natural language query, and the module will return relevant results.
+Each module in JARVIS-NOVA has its own set of commands. For example, to use the Perplexica search engine, you can simply input a natural language query, and the module will return relevant results.
 
 ---
 
@@ -211,7 +211,7 @@ This module allows users to generate entire PowerPoint presentations from a simp
 
 ### GitHub Integration
 
-With built-in GitHub integration, JARVIS-MARK5 allows you to manage your repositories directly from the interface.
+With built-in GitHub integration, JARVIS-NOVA allows you to manage your repositories directly from the interface.
 
 - **Key Features**:
   - Clone, create, and manage repositories.
