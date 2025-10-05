@@ -50,5 +50,5 @@ from TOOLS.SYSTEM_SETTINGS import system_theme, taskbar
 history_manager = Alpaca_DS_Converser.ConversationHistoryManager(history_offset=700)
 agent = openGPT.ConversationalAgent()
 # ai_model = deepseek_ai.DeepSeekAPI()
-# taskExecutor = RawDog.TaskExecutor()
+taskExecutor = RawDog.TaskExecutor()
 # engine = Partial_Async_HearlingAudioGenerator()

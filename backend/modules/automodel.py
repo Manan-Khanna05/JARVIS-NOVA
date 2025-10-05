@@ -368,8 +368,9 @@ def web_app(user_input):
 def Operate(user_input):
     logging.info(f"Received user input: {user_input}")
     
+    client = AIClient() # Instantiate AIClient
     q = prompt_main + user_input
-    response = AIClient.safe_predict(q)
+    response = client.safe_predict(q)
     
     logging.info(f"AI response: {response}")
     
@@ -455,7 +456,7 @@ def Operate(user_input):
             
             elif "powerpoint-dealing" in tag:
                 speak("OK sir, trying to deal with the powerpoint")
-                powerpoint_dealing(user_input)
+                generate_powerpoint(user_input)
                 results.append("powerpoint-dealing")
             
             elif "chat" in tag:
@@ -476,7 +477,7 @@ def Operate(user_input):
             else:
                 logic(user_input)
 
-        return '+'.join(results)
+        return '+ '.join(results)
 
     except Exception as e:
         logging.error(f"Error processing request: {str(e)}")

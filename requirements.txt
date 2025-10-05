@@ -1,3 +1,15 @@
+openai>=1.0.0
+requests>=2.31.0
+tomli>=2.0.1
+python-dotenv>=1.0.0
+elevenlabs>=0.2.24
+SpeechRecognition>=3.10.0
+pyaudio>=0.2.13
+python-dateutil>=2.8.2
+pytz>=2023.3
+google-api-python-client>=2.108.0
+google-auth-httplib2>=0.1.1
+google-auth-oauthlib>=1.1.0
 chromadb
 diskcache
 gradio-client
@@ -15,7 +27,6 @@ Pillow
 easyocr
 numpy
 sounddevice
-SpeechRecognition
 edge-tts
 pyttsx3
 colorama
@@ -24,16 +35,14 @@ pywin32
 pyautogui
 beautifulsoup4
 pyperclip
-pptx
+python-pptx
 g4f
 flask
 jinja2
 mtranslate
 PyAudio==0.2.14
 vosk==0.3.45
-Requests==2.31.0
 playsound==1.2.2
-python-dotenv==1.0.1
 NetHyTech-STT==1.0
 groq==0.5.0
 edge-tts==6.1.11
@@ -41,4 +50,3 @@ googlesearch-python==1.2.4
 opencv-python==4.9.0.80
 pvporcupine==1.9.5
 pygame==2.5.2
-webscout==2.9

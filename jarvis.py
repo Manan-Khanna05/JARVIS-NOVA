@@ -7,29 +7,33 @@ from threading import Lock
 import os
 import eel
 import pyautogui
-
+import tomli
 import base64
 from backend.modules.extra import GuiMessagesConverter, LoadMessages
 from dotenv import load_dotenv
 
+print("Starting JARVIS model...")
+
+# Load environment variables first
+load_dotenv()
+
 def get_api():
     try:
-      
-        with open('config/config.json') as config_file:
-            config = json.load(config_file)
-            API = config.get('GROQ_API')
+        with open('backend/AI/perplexica/config.toml', 'rb') as config_file:
+            config = tomli.load(config_file)
+            API = config['API_KEYS']['GROQ']
             if API is None:
-                raise ValueError("GROQ_API URL not found in config file")
+                raise ValueError("GROQ API key not found in config file")
             return API
     except FileNotFoundError:
         print("Config file not found.")
-    except json.JSONDecodeError:
-        print("Error decoding JSON in config file.")
+    except tomli.TOMLDecodeError:
+        print("Error decoding TOML in config file.")
     except Exception as e:
         print(f"Error reading config file: {e}")
     return None
 
-os.environ['GROQ_API'] = get_api()
+os.environ['GROQ_API_KEY'] = get_api()
 
 def run_docker():
     import os
@@ -39,14 +43,13 @@ def run_docker():
 thread = threading.Thread(target=run_docker)
 thread.start()
 
-load_dotenv()
 state = 'Available...'
 messages = LoadMessages()
 WEBCAM = False
 js_messageslist = []
 working: list[threading.Thread] = []
-InputLanguage = os.environ['InputLanguage']
-Username = os.environ['NickName']
+InputLanguage = os.getenv('English', 'en')  # Default to 'en' if not set
+Username = os.getenv('Manan', 'User')  # Default to 'User' if not set
 lock = Lock()
 
 def UniversalTranslator(Text: str) -> str:
@@ -80,10 +83,13 @@ def js_messages():
     """Fetches new messages to update the GUI."""
     global messages, js_messageslist
     with lock:
-        messages = LoadMessages()
-    if js_messageslist != messages:
-        new_messages = GuiMessagesConverter(messages[len(js_messageslist):])
-        js_messageslist = messages
+        current_messages = LoadMessages()
+    
+    if js_messageslist != current_messages:
+        # Ensure js_messageslist is updated with the full current message list
+        new_messages_to_convert = current_messages[len(js_messageslist):]
+        new_messages = GuiMessagesConverter(new_messages_to_convert)
+        js_messageslist = current_messages # Update js_messageslist to match current_messages
         return new_messages
     return []
 
@@ -170,5 +176,6 @@ def js_capture(image_data):
         f.write(image_bytes)
 
 # Initialize Eel and start the application
-eel.init('web')
+eel.init(os.path.join(os.path.dirname(__file__), 'web'))
 eel.start('spider.html', port=44444)
+print("GUI started successfully.")

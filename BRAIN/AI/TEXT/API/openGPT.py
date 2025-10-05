@@ -389,3 +389,6 @@ if __name__ == "__main__":
     system_message = "Talk Like Shakesphere" 
     final_response = generate(conversation, system_prompt=system_message, stream=True)
     print("\n\nFinal Response:", final_response) 
+
+# Add at the end of the file
+deepInfra_TEXT = ConversationalAgent()

@@ -1,6 +1,7 @@
 import json
 from dotenv import load_dotenv
 from os import environ
+import os
 load_dotenv()
 
 def AnswerModifier(Answer):
@@ -26,10 +27,29 @@ def QueryModifier(Query):
     return new_query.capitalize()
 
 def LoadMessages():
-    with open('ChatLog.json', 'r') as f:
-        messages = json.load(f)
-        return messages
-        return messages
+    chat_log_path = os.path.join(os.path.dirname(__file__), '..', '..', 'ChatLog.json')
+    try:
+        with open(chat_log_path, 'r') as f:
+            messages = json.load(f)
+            if not isinstance(messages, list):
+                print(f"Warning: ChatLog.json contains non-list data. Resetting to empty list.")
+                return []
+            return messages
+    except FileNotFoundError:
+        print(f"ChatLog.json not found at {chat_log_path}. Creating an empty file.")
+        with open(chat_log_path, 'w') as f:
+            json.dump([], f)
+        return []
+    except json.JSONDecodeError as e:
+        print(f"Error decoding ChatLog.json: {e}. Resetting to empty list.")
+        with open(chat_log_path, 'w') as f:
+            json.dump([], f)
+        return []
+    except Exception as e:
+        print(f"An unexpected error occurred while loading ChatLog.json: {e}. Resetting to empty list.")
+        with open(chat_log_path, 'w') as f:
+            json.dump([], f)
+        return []
 
 def GuiMessagesConverter(messages: list[dict[str, str]]):
     temp = []
