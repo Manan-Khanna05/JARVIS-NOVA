@@ -1,6 +1,6 @@
-# JARVIS-MARK5
+# JARVIS-NOVA
 
-JARVIS-MARK5 is an advanced AI-powered assistant designed to combine multiple modules and functionalities for a comprehensive and versatile user experience. Inspired by Iron Man's JARVIS, this AI assistant integrates powerful tools such as GPT-4, Groq, and other LLMs, with features spanning automation, intelligent search, and multi-modal interactions. JARVIS-MARK5 is built with scalability in mind and can be extended and customized easily, making it ideal for developers, researchers, and enthusiasts who want to push the boundaries of AI-driven assistants.
+JARVIS-NOVA is an advanced AI-powered assistant designed to combine multiple modules and functionalities for a comprehensive and versatile user experience. Inspired by Iron Man's JARVIS, this AI assistant integrates powerful tools such as GPT-4, Groq, and other LLMs, with features spanning automation, intelligent search, and multi-modal interactions. JARVIS-NOVA is built with scalability in mind and can be extended and customized easily, making it ideal for developers, researchers, and enthusiasts who want to push the boundaries of AI-driven assistants.
 
 ## Table of Contents
 
@@ -41,7 +41,7 @@ JARVIS-MARK5 is an advanced AI-powered assistant designed to combine multiple mo
 
 ## Features
 
-JARVIS-MARK5 offers a wide range of features:
+JARVIS-NOVA offers a wide range of features:
 
 - **AI-powered Search Engine**: The Perplexica module, integrated with GPT-4 and Groq, for intelligent and context-aware information retrieval.
 - **Automated PowerPoint Generator**: Generates presentations based on natural language input.
@@ -60,7 +60,7 @@ JARVIS-MARK5 offers a wide range of features:
 
 ## Installation
 
-To install JARVIS-MARK5, follow these steps:
+To install JARVIS-NOVA, follow these steps:
 
 1. **Ensure Python 3.8+ is installed**:
    Make sure that you have the correct version of Python installed by running:
@@ -70,8 +70,8 @@ To install JARVIS-MARK5, follow these steps:
 
 2. **Clone the repository**:
    ```bash
-   git clone https://github.com/Likhithsai2580/JARVIS-MARK5.git
-   cd JARVIS-MARK5
+   git clone https://github.com/Manan-Khanna05/JARVIS-NOVA.git
+   cd JARVIS-NOVA
    ```
 
 3. **Create and activate a virtual environment**:
@@ -105,7 +105,7 @@ To install JARVIS-MARK5, follow these steps:
 
 ### Main Configuration
 
-The core configuration file for JARVIS-MARK5 is `config.json`, located in the `config` directory. This file contains basic settings and can be customized based on your requirements.
+The core configuration file for JARVIS-NOVA is `config.json`, located in the `config` directory. This file contains basic settings and can be customized based on your requirements.
 
 Here is an example `config.json` structure:
 ```json
@@ -119,11 +119,11 @@ Update the `OCR_LINK` with the appropriate OCR service and provide your Groq API
 
 ### API Keys
 
-Many of JARVIS-MARK5’s functionalities require API keys, such as for OpenAI and Groq. Ensure that you have signed up for these services and obtained API keys. You will then need to include them in the respective configuration files, as described in the section for each module.
+Many of JARVIS-NOVA's functionalities require API keys, such as for OpenAI and Groq. Ensure that you have signed up for these services and obtained API keys. You will then need to include them in the respective configuration files, as described in the section for each module.
 
 ### Perplexica Configuration
 
-The Perplexica module is the AI-powered search engine within JARVIS-MARK5. To configure Perplexica:
+The Perplexica module is the AI-powered search engine within JARVIS-NOVA. To configure Perplexica:
 
 1. Rename `sample.config.toml` to `config.toml` in `backend/AI/Perplexica`.
 2. Edit the file to include your API keys and preferences:
@@ -145,7 +145,7 @@ OLLAMA = "http://localhost:11434"
 
 ### Database Configuration
 
-JARVIS-MARK5 uses PostgreSQL to store conversation history and other data persistently. 
+JARVIS-NOVA uses PostgreSQL to store conversation history and other data persistently.
 
 #### PostgreSQL Setup
 
@@ -169,7 +169,7 @@ JARVIS-MARK5 uses PostgreSQL to store conversation history and other data persis
 
 ## Usage
 
-Once everything is installed and configured, you can start JARVIS-MARK5 by running the following command:
+Once everything is installed and configured, you can start JARVIS-NOVA by running the following command:
 
 ```bash
 python jarvis.py
@@ -184,7 +184,7 @@ python jarvis.py
 
 ### Module Commands
 
-Each module in JARVIS-MARK5 has its own set of commands. For example, to use the Perplexica search engine, you can simply input a natural language query, and the module will return relevant results.
+Each module in JARVIS-NOVA has its own set of commands. For example, to use the Perplexica search engine, you can simply input a natural language query, and the module will return relevant results.
 
 ---
 
@@ -211,7 +211,7 @@ This module allows users to generate entire PowerPoint presentations from a simp
 
 ### GitHub Integration
 
-With built-in GitHub integration, JARVIS-MARK5 allows you to manage your repositories directly from the interface.
+With built-in GitHub integration, JARVIS-NOVA allows you to manage your repositories directly from the interface.
 
 - **Key Features**:
   - Clone, create, and manage repositories.
@@ -222,7 +222,7 @@ For configuration details, check the [GitHub integration guide](extensions/confi
 
 ### Multi-modal Interactions
 
-JARVIS-MARK5 supports multiple forms of input and output, allowing users to interact with it through:
+JARVIS-NOVA supports multiple forms of input and output, allowing users to interact with it through:
 - **Text-based** queries and responses.
 - **Voice-based** interactions.
 - **Image analysis** and generation.
@@ -231,7 +231,7 @@ You can configure or switch between these modalities in the `config.json` file.
 
 ---
 
-## Extending JARVIS-MARK5
+## Extending JARVIS-NOVA
 
 ### Adding Existing Extensions
 
@@ -258,15 +258,15 @@ For a detailed tutorial, see the [Extensions Developer Guide](docs/extensions_gu
 
 ### Natural Language Understanding
 
-JARVIS-MARK5 incorporates advanced NLU to accurately interpret user commands and questions. The NLP pipeline leverages pre-trained models from GPT-4 and other LLMs.
+JARVIS-NOVA incorporates advanced NLU to accurately interpret user commands and questions. The NLP pipeline leverages pre-trained models from GPT-4 and other LLMs.
 
 ### Real-time Data Analysis
 
-Leverage JARVIS-MARK5's data analysis capabilities to analyze and visualize real-time data, powered by Python libraries such as Pandas, NumPy, and Matplotlib.
+Leverage JARVIS-NOVA's data analysis capabilities to analyze and visualize real-time data, powered by Python libraries such as Pandas, NumPy, and Matplotlib.
 
 ### Task Automation
 
-Automate repetitive tasks, such as setting reminders, managing calendars, or generating reports, using JARVIS-MARK5’s task scheduling system.
+Automate repetitive tasks, such as setting reminders, managing calendars, or generating reports, using JARVIS-NOVA's task scheduling system.
 
 ---
 
@@ -314,7 +314,7 @@ Run tests using `pytest`. Include unit tests for any new modules or features.
 
 ## Roadmap
 
-Future plans for JARVIS-MARK5 include:
+Future plans for JARVIS-NOVA include:
 
 - **Mobile App Integration**
 - **Enhanced Multi-modal Interaction**
@@ -325,7 +325,7 @@ Future plans for JARVIS-MARK5 include:
 
 ## Frequently Asked Questions
 
-1. **Can I use JARVIS-MARK5 offline?**  
+1. **Can I use JARVIS-NOVA offline?**
    Yes, certain functionalities can work offline, but most AI-driven modules require an internet connection.
 
 ---
@@ -338,4 +338,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) fi
 
 ## Acknowledgements
 
-Special thanks to all contributors and developers who helped build and improve JARVIS-MARK5.
+Special thanks to all contributors and developers who helped build and improve JARVIS-NOVA.
