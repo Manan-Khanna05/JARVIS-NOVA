@@ -71,7 +71,7 @@ To install JARVIS-NOVA, follow these steps:
 2. **Clone the repository**:
    ```bash
    git clone https://github.com/Likhithsai2580/JARVIS-MARK5.git
-   cd JARVIS-MARK5
+   cd JARVIS-NOVA
    ```
 
 3. **Create and activate a virtual environment**:
