@@ -160,3 +160,44 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# JARVIS-NOVA specific
+*.log
+*.wav
+*.mp3
+*.mp4
+*.avi
+*.mov
+captured_image.jpg
+ai_client.log
+ChatLog.json
+Cache/
+ASSETS/STREAM_AUDIOS/
+ASSETS/SOUNDS/
+ASSETS/Vosk/
+ASSETS/USERDATA/
+ASSETS/CLAP_DETECTS/
+ASSETS/conversation_history.json
+ASSETS/available_working_proxies.txt
+ASSETS/openGPT_IDs.txt
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
